@@ -116,11 +116,13 @@ function medianCutApply(
   return maxw == rw ? doCut("r") : maxw == gw ? doCut("g") : doCut("b");
 }
 
-function quantize(pixels: Pixels[], maxcolors: number): ColorMap {
-  // short-circuit
-  if (!pixels.length || maxcolors < 2 || maxcolors > 256) {
-    console.log("wrong number of maxcolors");
-    return new ColorMap();
+function quantize(pixels: Pixels[], colorCount: number): ColorMap {
+  if (!pixels.length) {
+    throw new Error("pixels array cannot be empty.");
+  }
+
+  if (colorCount < 2 || colorCount > 256) {
+    throw new Error("colorCout should be in range [2, 256].");
   }
 
   const maxIterations = 1000;
@@ -130,7 +132,7 @@ function quantize(pixels: Pixels[], maxcolors: number): ColorMap {
   const histo = getHistogram(pixels);
 
   // check that we aren't below maxcolors already
-  if (histo.length <= maxcolors) {
+  if (histo.length <= colorCount) {
     // TODO: generate the new colors from the histo and return
   }
 
@@ -192,7 +194,7 @@ function quantize(pixels: Pixels[], maxcolors: number): ColorMap {
   }
 
   // first set of colors, sorted by population
-  iter(pq, fractByPopulations * maxcolors);
+  iter(pq, fractByPopulations * colorCount);
 
   // Re-sort by the product of pixel occupancy times the size in color space.
   const pq2 = new PriorityQueue<ColorSpaceBox>((a, b) => {
@@ -207,7 +209,7 @@ function quantize(pixels: Pixels[], maxcolors: number): ColorMap {
   }
 
   // next set - generate the median cuts using the (npix * vol) sorting.
-  iter(pq2, maxcolors - pq2.size());
+  iter(pq2, colorCount - pq2.size());
 
   // calculate the actual colors
   const cmap = new ColorMap();
