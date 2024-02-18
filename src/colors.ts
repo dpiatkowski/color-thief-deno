@@ -29,11 +29,26 @@ function getColorIndex(r: number, g: number, b: number): number {
   return (r << (2 * sigbits)) + (g << sigbits) + b;
 }
 
+type RGB = Readonly<{
+  red: number;
+  green: number;
+  blue: number;
+}>;
+
+function pixelsToRgb(pixel: Pixels): RGB {
+  return {
+    red: pixel.at(0) ?? 0,
+    green: pixel.at(1) ?? 0,
+    blue: pixel.at(2) ?? 0,
+  };
+}
+
 export {
   getColorIndex,
   getHistogram,
   type Histogram,
   type Pixels,
+  pixelsToRgb,
   rshift,
   sigbits,
 };

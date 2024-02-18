@@ -1,6 +1,7 @@
 import { Hono, HTTPException } from "https://deno.land/x/hono@v4.0.4/mod.ts";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 import { getPalette } from "./color_thief.ts";
+import { pixelsToRgb } from "./colors.ts";
 
 const paletteQuery = z.object({
   url: z.string().url(),
@@ -30,11 +31,7 @@ function createServer() {
       const palette = await getPalette(url, quality, colorCount);
 
       return c.json({
-        palette: palette.map((pixel) => ({
-          red: pixel.at(0),
-          green: pixel.at(1),
-          blue: pixel.at(2),
-        })),
+        palette: palette.map(pixelsToRgb),
       });
     } else {
       throw new HTTPException(400);
