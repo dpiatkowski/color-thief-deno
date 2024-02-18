@@ -1,16 +1,16 @@
 class PriorityQueue<T> {
   readonly #contents: T[] = [];
-  #sorted = false;
+  #isSorted = false;
 
   constructor(private readonly compareFunction: (a: T, b: T) => number) {}
 
   push(item: T) {
     this.#contents.push(item);
-    this.#sorted = false;
+    this.#isSorted = false;
   }
 
   peek(index: number) {
-    if (!this.#sorted) {
+    if (!this.#isSorted) {
       this.#sort();
     }
 
@@ -22,7 +22,7 @@ class PriorityQueue<T> {
   }
 
   pop() {
-    if (!this.#sorted) {
+    if (!this.#isSorted) {
       this.#sort();
     }
 
@@ -39,7 +39,17 @@ class PriorityQueue<T> {
 
   #sort() {
     this.#contents.sort(this.compareFunction);
-    this.#sorted = true;
+    this.#isSorted = true;
+  }
+
+  *[Symbol.iterator]() {
+    if (!this.#isSorted) {
+      this.#sort();
+    }
+
+    for (const item of this.#contents) {
+      yield item;
+    }
   }
 }
 

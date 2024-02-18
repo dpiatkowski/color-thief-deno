@@ -34,31 +34,29 @@ class ColorMap {
     let lowestDistance: number | undefined;
     let nearestColor: Pixels | undefined;
 
-    for (let i = 0; i < this.#items.size(); i++) {
-      const item = this.#items.peek(i);
-      if (item) {
-        const sumOfPowers = Math.pow(color[0] - item.color[0], 2) +
-          Math.pow(color[1] - item.color[1], 2) +
-          Math.pow(color[2] - item.color[2], 2);
+    for (const item of this.#items) {
+      const sumOfPowers = Math.pow(color[0] - item.color[0], 2) +
+        Math.pow(color[1] - item.color[1], 2) +
+        Math.pow(color[2] - item.color[2], 2);
 
-        const distance = Math.sqrt(sumOfPowers);
+      const distance = Math.sqrt(sumOfPowers);
 
-        if (lowestDistance === undefined || distance < lowestDistance) {
-          lowestDistance = distance;
-          nearestColor = item.color;
-        }
+      if (lowestDistance === undefined || distance < lowestDistance) {
+        lowestDistance = distance;
+        nearestColor = item.color;
       }
     }
+
     return nearestColor;
   }
 
   map(color: Pixels) {
-    for (let i = 0; i < this.#items.size(); i++) {
-      const item = this.#items.peek(i);
-      if (item && item.vbox.contains(color)) {
+    for (const item of this.#items) {
+      if (item.vbox.contains(color)) {
         return item.color;
       }
     }
+
     return this.nearest(color);
   }
 }
