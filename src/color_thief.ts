@@ -29,7 +29,6 @@ function getPaletteFromPixels(
   }
 
   const colorMap = quantize(pixelArray, colorCount);
-
   return colorMap.palette();
 }
 
@@ -56,10 +55,7 @@ async function getColor(uri: string, quality = 10) {
  */
 async function getPalette(uri: string, quality = 10, colorCount = 10) {
   using image = await CanvasImage.load(uri);
-
-  const palette = getPaletteFromPixels(image, quality, colorCount);
-
-  return palette;
+  return getPaletteFromPixels(image, quality, colorCount);
 }
 
 export { getColor, getPalette };
