@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.216.0/assert/mod.ts";
+import { assertEquals } from "@std/assert";
 import { PriorityQueue } from "./priority_queue.ts";
 
 function naturalOrder(a: number, b: number): number {
