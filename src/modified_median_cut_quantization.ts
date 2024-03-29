@@ -1,6 +1,6 @@
 // Based on https://github.com/olivierlesnicki/quantize
 
-import { maxBy } from "https://deno.land/std@0.216.0/collections/max_by.ts";
+import { maxBy } from "@std/collections";
 import { ColorMap } from "./color_map.ts";
 import { ColorSpaceBox } from "./color_space_box.ts";
 import { getColorIndex, getHistogram, Histogram, Pixels } from "./colors.ts";
