@@ -1,4 +1,5 @@
-import { Hono, HTTPException } from "https://deno.land/x/hono@v4.0.4/mod.ts";
+import { Hono } from "@hono/hono";
+import { HTTPException } from "@hono/hono/http-exception";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 import { getPalette } from "./color_thief.ts";
 import { pixelsToRgb } from "./colors.ts";
