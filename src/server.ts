@@ -1,6 +1,6 @@
 import { Hono } from "@hono/hono";
 import { HTTPException } from "@hono/hono/http-exception";
-import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
+import { z } from "zod";
 import { getPalette } from "./color_thief.ts";
 import { pixelsToRgb } from "./colors.ts";
 
