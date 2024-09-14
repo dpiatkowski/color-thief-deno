@@ -2,14 +2,14 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "jsr:@hono/hono@^4.4.3": "jsr:@hono/hono@4.4.3",
+      "jsr:@hono/hono@4.6.1": "jsr:@hono/hono@4.6.1",
       "jsr:@std/assert@1.0.5": "jsr:@std/assert@1.0.5",
       "jsr:@std/collections@1.0.6": "jsr:@std/collections@1.0.6",
       "jsr:@std/internal@^1.0.3": "jsr:@std/internal@1.0.3"
     },
     "jsr": {
-      "@hono/hono@4.4.3": {
-        "integrity": "c718c68cdb9d5a1109dde0b5413a3ba0c4549025da00a6cab859685c9168e27f"
+      "@hono/hono@4.6.1": {
+        "integrity": "993704e3a2fa8e965c2fa46c57fc038bd277e781a982d3bf0fb278f6671b195f"
       },
       "@std/assert@1.0.5": {
         "integrity": "e37da8e4033490ce613eec4ac1d78dba1faf5b02a3f6c573a28f15365b9b440f",
@@ -52,7 +52,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@hono/hono@^4.4.3",
+      "jsr:@hono/hono@4.6.1",
       "jsr:@std/assert@1.0.5",
       "jsr:@std/collections@1.0.6"
     ]
