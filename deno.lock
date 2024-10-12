@@ -2,7 +2,7 @@
   "version": "4",
   "specifiers": {
     "jsr:@gfx/canvas-wasm@~0.4.2": "0.4.2",
-    "jsr:@hono/hono@4.6.1": "4.6.1",
+    "jsr:@hono/hono@4.6.4": "4.6.4",
     "jsr:@std/assert@1.0.6": "1.0.6",
     "jsr:@std/collections@1.0.8": "1.0.8",
     "jsr:@std/encoding@1.0.5": "1.0.5",
@@ -16,8 +16,8 @@
         "jsr:@std/encoding"
       ]
     },
-    "@hono/hono@4.6.1": {
-      "integrity": "993704e3a2fa8e965c2fa46c57fc038bd277e781a982d3bf0fb278f6671b195f"
+    "@hono/hono@4.6.4": {
+      "integrity": "9bbd937653ab902405af33743561140f8883d27dc730eb9ceac665e2468c8bf6"
     },
     "@std/assert@1.0.6": {
       "integrity": "1904c05806a25d94fe791d6d883b685c9e2dcd60e4f9fc30f4fc5cf010c72207",
@@ -43,7 +43,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@gfx/canvas-wasm@~0.4.2",
-      "jsr:@hono/hono@4.6.1",
+      "jsr:@hono/hono@4.6.4",
       "jsr:@std/assert@1.0.6",
       "jsr:@std/collections@1.0.8",
       "npm:zod@^3.23.8"

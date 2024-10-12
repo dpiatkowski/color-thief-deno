@@ -1,5 +1,4 @@
-import { Hono } from "@hono/hono";
-import { HTTPException } from "@hono/hono/http-exception";
+import { type Context, Hono } from "@hono/hono";
 import { z } from "zod";
 import { getPalette } from "./color_thief.ts";
 import { pixelsToRgb } from "./colors.ts";
@@ -17,9 +16,9 @@ const paletteQuery = z.object({
 function createServer() {
   const app = new Hono();
 
-  app.get("/", (c) => c.text("Labor omnia vincit."));
+  app.get("/", (c: Context) => c.text("Labor omnia vincit."));
 
-  app.get("/palette", async (c) => {
+  app.get("/palette", async (c: Context) => {
     const parsedQuery = paletteQuery.safeParse({
       url: c.req.query("url"),
       quality: c.req.query("quality"),
@@ -35,7 +34,7 @@ function createServer() {
         palette: palette.map(pixelsToRgb),
       });
     } else {
-      throw new HTTPException(400);
+      return c.text("Invalid request", 400);
     }
   });
 
