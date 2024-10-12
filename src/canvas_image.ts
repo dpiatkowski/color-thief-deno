@@ -4,7 +4,7 @@ import {
   EmulatedCanvas2D,
   Image,
   loadImage,
-} from "https://deno.land/x/canvas@v1.4.1/mod.ts";
+} from "@gfx/canvas-wasm";
 
 class CanvasImage implements Disposable {
   #width: number;

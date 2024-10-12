@@ -1,35 +1,43 @@
 {
-  "version": "3",
-  "packages": {
-    "specifiers": {
-      "jsr:@hono/hono@4.6.1": "jsr:@hono/hono@4.6.1",
-      "jsr:@std/assert@1.0.5": "jsr:@std/assert@1.0.5",
-      "jsr:@std/collections@1.0.6": "jsr:@std/collections@1.0.6",
-      "jsr:@std/internal@^1.0.3": "jsr:@std/internal@1.0.3",
-      "npm:zod@^3.23.8": "npm:zod@3.23.8"
+  "version": "4",
+  "specifiers": {
+    "jsr:@gfx/canvas-wasm@~0.4.2": "0.4.2",
+    "jsr:@hono/hono@4.6.1": "4.6.1",
+    "jsr:@std/assert@1.0.5": "1.0.5",
+    "jsr:@std/collections@1.0.6": "1.0.6",
+    "jsr:@std/encoding@1.0.5": "1.0.5",
+    "jsr:@std/internal@^1.0.3": "1.0.3",
+    "npm:zod@^3.23.8": "3.23.8"
+  },
+  "jsr": {
+    "@gfx/canvas-wasm@0.4.2": {
+      "integrity": "d653be3bd12cb2fa9bbe5d1b1f041a81b91d80b68502761204aaf60e4592532a",
+      "dependencies": [
+        "jsr:@std/encoding"
+      ]
     },
-    "jsr": {
-      "@hono/hono@4.6.1": {
-        "integrity": "993704e3a2fa8e965c2fa46c57fc038bd277e781a982d3bf0fb278f6671b195f"
-      },
-      "@std/assert@1.0.5": {
-        "integrity": "e37da8e4033490ce613eec4ac1d78dba1faf5b02a3f6c573a28f15365b9b440f",
-        "dependencies": [
-          "jsr:@std/internal@^1.0.3"
-        ]
-      },
-      "@std/collections@1.0.6": {
-        "integrity": "60ad252af7df0594e6455f697920a37cd523ad66469fefcc9735e362826ac01d"
-      },
-      "@std/internal@1.0.3": {
-        "integrity": "208e9b94a3d5649bd880e9ca38b885ab7651ab5b5303a56ed25de4755fb7b11e"
-      }
+    "@hono/hono@4.6.1": {
+      "integrity": "993704e3a2fa8e965c2fa46c57fc038bd277e781a982d3bf0fb278f6671b195f"
     },
-    "npm": {
-      "zod@3.23.8": {
-        "integrity": "sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==",
-        "dependencies": {}
-      }
+    "@std/assert@1.0.5": {
+      "integrity": "e37da8e4033490ce613eec4ac1d78dba1faf5b02a3f6c573a28f15365b9b440f",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/collections@1.0.6": {
+      "integrity": "60ad252af7df0594e6455f697920a37cd523ad66469fefcc9735e362826ac01d"
+    },
+    "@std/encoding@1.0.5": {
+      "integrity": "ecf363d4fc25bd85bd915ff6733a7e79b67e0e7806334af15f4645c569fefc04"
+    },
+    "@std/internal@1.0.3": {
+      "integrity": "208e9b94a3d5649bd880e9ca38b885ab7651ab5b5303a56ed25de4755fb7b11e"
+    }
+  },
+  "npm": {
+    "zod@3.23.8": {
+      "integrity": "sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g=="
     }
   },
   "remote": {
@@ -46,6 +54,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@gfx/canvas-wasm@~0.4.2",
       "jsr:@hono/hono@4.6.1",
       "jsr:@std/assert@1.0.5",
       "jsr:@std/collections@1.0.6",
