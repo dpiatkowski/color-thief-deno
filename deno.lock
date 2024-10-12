@@ -3,10 +3,10 @@
   "specifiers": {
     "jsr:@gfx/canvas-wasm@~0.4.2": "0.4.2",
     "jsr:@hono/hono@4.6.1": "4.6.1",
-    "jsr:@std/assert@1.0.5": "1.0.5",
-    "jsr:@std/collections@1.0.6": "1.0.6",
+    "jsr:@std/assert@1.0.6": "1.0.6",
+    "jsr:@std/collections@1.0.8": "1.0.8",
     "jsr:@std/encoding@1.0.5": "1.0.5",
-    "jsr:@std/internal@^1.0.3": "1.0.3",
+    "jsr:@std/internal@^1.0.4": "1.0.4",
     "npm:zod@^3.23.8": "3.23.8"
   },
   "jsr": {
@@ -19,20 +19,20 @@
     "@hono/hono@4.6.1": {
       "integrity": "993704e3a2fa8e965c2fa46c57fc038bd277e781a982d3bf0fb278f6671b195f"
     },
-    "@std/assert@1.0.5": {
-      "integrity": "e37da8e4033490ce613eec4ac1d78dba1faf5b02a3f6c573a28f15365b9b440f",
+    "@std/assert@1.0.6": {
+      "integrity": "1904c05806a25d94fe791d6d883b685c9e2dcd60e4f9fc30f4fc5cf010c72207",
       "dependencies": [
         "jsr:@std/internal"
       ]
     },
-    "@std/collections@1.0.6": {
-      "integrity": "60ad252af7df0594e6455f697920a37cd523ad66469fefcc9735e362826ac01d"
+    "@std/collections@1.0.8": {
+      "integrity": "de76692f9121838711b1d2fb5042619c074db26905a87b58cff56cfe1bd6d6d0"
     },
     "@std/encoding@1.0.5": {
       "integrity": "ecf363d4fc25bd85bd915ff6733a7e79b67e0e7806334af15f4645c569fefc04"
     },
-    "@std/internal@1.0.3": {
-      "integrity": "208e9b94a3d5649bd880e9ca38b885ab7651ab5b5303a56ed25de4755fb7b11e"
+    "@std/internal@1.0.4": {
+      "integrity": "62e8e4911527e5e4f307741a795c0b0a9e6958d0b3790716ae71ce085f755422"
     }
   },
   "npm": {
@@ -40,24 +40,12 @@
       "integrity": "sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g=="
     }
   },
-  "remote": {
-    "https://deno.land/std@0.106.0/encoding/base64.ts": "eecae390f1f1d1cae6f6c6d732ede5276bf4b9cd29b1d281678c054dc5cc009e",
-    "https://deno.land/x/canvas@v1.4.1/deps.ts": "e956026d98094946166e06d7b799290b732db015813870d84e04e33ab88e98f3",
-    "https://deno.land/x/canvas@v1.4.1/mod.ts": "a4e16972647ceafef58612a377a218372454c99d2c9da615a132694597114f80",
-    "https://deno.land/x/canvas@v1.4.1/src/base64.ts": "0928031fdba0c43b617154fbe2eb7578366460c04da1422933ae5e936d3d0349",
-    "https://deno.land/x/canvas@v1.4.1/src/canvas.ts": "58119999b04f68ebeed2627485c5c24c5b0c029707edde0b6568814f9049a3a8",
-    "https://deno.land/x/canvas@v1.4.1/src/canvaskit.ts": "c3d807472cbb3e1d9fc01bb43ff974ef796c4b010178d1595be5fa793cce5e7d",
-    "https://deno.land/x/canvas@v1.4.1/src/color_util.ts": "28f1072f0a5acbe7add7fac2f452311a47b44c080806fc4057de2d2e405c6c1c",
-    "https://deno.land/x/canvas@v1.4.1/src/lib.js": "bb21711589bfbc8997b455cdf53e3150e23289f3b44809188041b1d2fc7924fa",
-    "https://deno.land/x/canvas@v1.4.1/src/types.ts": "67d5800f8f4b0a407e0251676a03ae91b5f50a3ed53e6b72dc5984113cb93128",
-    "https://deno.land/x/canvas@v1.4.1/src/wasm.js": "449d72cc14fc4142a5853f944df49a744d852981d09c5515528ede8aebb0afda"
-  },
   "workspace": {
     "dependencies": [
       "jsr:@gfx/canvas-wasm@~0.4.2",
       "jsr:@hono/hono@4.6.1",
-      "jsr:@std/assert@1.0.5",
-      "jsr:@std/collections@1.0.6",
+      "jsr:@std/assert@1.0.6",
+      "jsr:@std/collections@1.0.8",
       "npm:zod@^3.23.8"
     ]
   }
