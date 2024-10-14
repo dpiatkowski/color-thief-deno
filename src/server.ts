@@ -1,4 +1,5 @@
 import { type Context, Hono } from "@hono/hono";
+import { memoize } from "@std/cache";
 import { z } from "zod";
 import { getPalette } from "./color_thief.ts";
 import { pixelsToRgb } from "./colors.ts";
@@ -12,6 +13,16 @@ const paletteQuery = z.object({
     parseInt(val, 10)
   ),
 });
+
+const getPaletteMemo = memoize(
+  (url: string, quality: number, colorCount: number) => {
+    return getPalette(url, quality, colorCount);
+  },
+  {
+    getKey: (url, quality, colorCount) =>
+      `u:${url}-q:${quality}-c:${colorCount}`,
+  },
+);
 
 function createServer() {
   const app = new Hono();
@@ -28,7 +39,7 @@ function createServer() {
     if (parsedQuery.success) {
       const { url, quality, colorCount } = parsedQuery.data;
 
-      const palette = await getPalette(url, quality, colorCount);
+      const palette = await getPaletteMemo(url, quality, colorCount);
 
       return c.json({
         palette: palette.map(pixelsToRgb),

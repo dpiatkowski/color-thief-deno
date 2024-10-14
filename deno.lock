@@ -4,6 +4,7 @@
     "jsr:@gfx/canvas-wasm@~0.4.2": "0.4.2",
     "jsr:@hono/hono@4.6.4": "4.6.4",
     "jsr:@std/assert@1.0.6": "1.0.6",
+    "jsr:@std/cache@~0.1.3": "0.1.3",
     "jsr:@std/collections@1.0.8": "1.0.8",
     "jsr:@std/encoding@1.0.5": "1.0.5",
     "jsr:@std/internal@^1.0.4": "1.0.4",
@@ -25,6 +26,9 @@
         "jsr:@std/internal"
       ]
     },
+    "@std/cache@0.1.3": {
+      "integrity": "8d3ab61d994d0915295048999f34a8ce2280f0e4d1f4cccb08c9e3d297c0c6ec"
+    },
     "@std/collections@1.0.8": {
       "integrity": "de76692f9121838711b1d2fb5042619c074db26905a87b58cff56cfe1bd6d6d0"
     },
@@ -45,6 +49,7 @@
       "jsr:@gfx/canvas-wasm@~0.4.2",
       "jsr:@hono/hono@4.6.4",
       "jsr:@std/assert@1.0.6",
+      "jsr:@std/cache@~0.1.3",
       "jsr:@std/collections@1.0.8",
       "npm:zod@^3.23.8"
     ]
