@@ -1,27 +1,18 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@gfx/canvas-wasm@~0.4.2": "0.4.2",
-    "jsr:@hono/hono@4.6.13": "4.6.13",
-    "jsr:@std/assert@1.0.9": "1.0.9",
+    "jsr:@std/assert@1.0.11": "1.0.11",
     "jsr:@std/cache@~0.1.3": "0.1.3",
-    "jsr:@std/collections@1.0.9": "1.0.9",
-    "jsr:@std/encoding@1.0.5": "1.0.5",
     "jsr:@std/internal@^1.0.5": "1.0.5",
-    "npm:zod@^3.23.8": "3.23.8"
+    "npm:zod@3.24.2": "3.24.2",
+    "npm:zod@^3.23.8": "3.24.2"
   },
   "jsr": {
-    "@gfx/canvas-wasm@0.4.2": {
-      "integrity": "d653be3bd12cb2fa9bbe5d1b1f041a81b91d80b68502761204aaf60e4592532a",
-      "dependencies": [
-        "jsr:@std/encoding"
-      ]
+    "@hono/hono@4.7.1": {
+      "integrity": "f75aaf6a026ad05406e60125a70a3d2a77e3b62991f8c4e38c624bdfc1a1dc26"
     },
-    "@hono/hono@4.6.13": {
-      "integrity": "198970fc6facf71a88ee57aa1ed32143b56bcb0f842fa965ca3ee7d6fdd21a8e"
-    },
-    "@std/assert@1.0.9": {
-      "integrity": "a9f0c611a869cc791b26f523eec54c7e187aab7932c2c8e8bea0622d13680dcd",
+    "@std/assert@1.0.11": {
+      "integrity": "2461ef3c368fe88bc60e186e7744a93112f16fd110022e113a0849e94d1c83c1",
       "dependencies": [
         "jsr:@std/internal"
       ]
@@ -29,29 +20,26 @@
     "@std/cache@0.1.3": {
       "integrity": "8d3ab61d994d0915295048999f34a8ce2280f0e4d1f4cccb08c9e3d297c0c6ec"
     },
-    "@std/collections@1.0.9": {
-      "integrity": "4f58104ead08a04a2199374247f07befe50ba01d9cca8cbb23ab9a0419921e71"
-    },
-    "@std/encoding@1.0.5": {
-      "integrity": "ecf363d4fc25bd85bd915ff6733a7e79b67e0e7806334af15f4645c569fefc04"
+    "@std/collections@1.0.10": {
+      "integrity": "903af106a3d92970d74e20f7ebff77d9658af9bef4403f1dc42a7801c0575899"
     },
     "@std/internal@1.0.5": {
       "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
     }
   },
   "npm": {
-    "zod@3.23.8": {
-      "integrity": "sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g=="
+    "zod@3.24.2": {
+      "integrity": "sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ=="
     }
   },
   "workspace": {
     "dependencies": [
-      "jsr:@gfx/canvas-wasm@~0.4.2",
-      "jsr:@hono/hono@4.6.13",
-      "jsr:@std/assert@1.0.9",
+      "jsr:@gfx/canvas-wasm@0.4.2",
+      "jsr:@hono/hono@4.7.1",
+      "jsr:@std/assert@1.0.11",
       "jsr:@std/cache@~0.1.3",
-      "jsr:@std/collections@1.0.9",
-      "npm:zod@^3.23.8"
+      "jsr:@std/collections@1.0.10",
+      "npm:zod@3.24.2"
     ]
   }
 }
