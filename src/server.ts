@@ -3,10 +3,16 @@ import { memoize } from "@std/cache";
 import { getPalette } from "./color_thief.ts";
 import { pixelsToRgb } from "./colors.ts";
 
-function parseQuery(raw: { url?: string; quality?: string; colorCount?: string }) {
+function parseQuery(
+  raw: { url?: string; quality?: string; colorCount?: string },
+) {
   const url = raw.url;
   if (!url) return null;
-  try { new URL(url); } catch { return null; }
+  try {
+    new URL(url);
+  } catch {
+    return null;
+  }
   return {
     url,
     quality: parseInt(raw.quality ?? "10", 10),
