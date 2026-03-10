@@ -2,9 +2,9 @@
   "version": "5",
   "specifiers": {
     "jsr:@gfx/canvas-wasm@0.4.2": "0.4.2",
+    "jsr:@std/assert@1.0.19": "1.0.19",
     "jsr:@std/encoding@1.0.5": "1.0.5",
-    "npm:zod@3.24.2": "3.24.2",
-    "npm:zod@^3.23.8": "3.24.2"
+    "jsr:@std/internal@^1.0.12": "1.0.12"
   },
   "jsr": {
     "@gfx/canvas-wasm@0.4.2": {
@@ -17,7 +17,10 @@
       "integrity": "f75aaf6a026ad05406e60125a70a3d2a77e3b62991f8c4e38c624bdfc1a1dc26"
     },
     "@std/assert@1.0.19": {
-      "integrity": "eaada96ee120cb980bc47e040f82814d786fe8162ecc53c91d8df60b8755991e"
+      "integrity": "eaada96ee120cb980bc47e040f82814d786fe8162ecc53c91d8df60b8755991e",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
     },
     "@std/collections@1.0.10": {
       "integrity": "903af106a3d92970d74e20f7ebff77d9658af9bef4403f1dc42a7801c0575899"
@@ -29,19 +32,13 @@
       "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
     }
   },
-  "npm": {
-    "zod@3.24.2": {
-      "integrity": "sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ=="
-    }
-  },
   "workspace": {
     "dependencies": [
       "jsr:@gfx/canvas-wasm@0.4.2",
-      "jsr:@hono/hono@4.10.3",
+      "jsr:@hono/hono@4.12.7",
       "jsr:@std/assert@1.0.19",
       "jsr:@std/cache@~0.2.2",
-      "jsr:@std/collections@1.1.6",
-      "npm:zod@3.24.2"
+      "jsr:@std/collections@1.1.6"
     ]
   }
 }
